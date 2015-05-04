@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="ModuleRunConfigurationManager">
+    <configuration default="false" name="All tests in BlogExample-Sinatra: BlogExample-Sinatra" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest" temporary="true">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="BlogExample-Sinatra" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$MODULE_DIR$" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*}.rb" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.3.8, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="backports (v3.6.4, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.10, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.1.5, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.9.4, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="data_mapper (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="data_objects (v0.10.15, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-aggregates (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-constraints (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-core (v1.2.1, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-do-adapter (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-migrations (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-mysql-adapter (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-serializer (v1.2.2, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-sqlite-adapter (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-timestamps (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-transactions (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-types (v1.2.2, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dm-validations (v1.2.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="do_mysql (v0.10.15, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="do_sqlite3 (v0.10.15, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="fastercsv (v1.5.5, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.2, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json_pure (v1.8.2, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack (v1.6.0, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.5.3, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sinatra (v1.4.6, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sinatra-contrib (v1.4.2, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="stringex (v1.5.1, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, rbenv: 2.2.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uuidtools (v2.1.5, rbenv: 2.2.1) [gem]" level="application" />
+  </component>
+</module>
