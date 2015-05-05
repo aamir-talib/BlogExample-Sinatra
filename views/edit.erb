@@ -22,6 +22,8 @@
     <label>Attachment:</label>
     <input type="file" name="attachment">
   </div>
-  <input class="btn btn-success" type="submit" name="Publish" value="Update" />
+  <input class="btn btn-success" type="submit" formaction="/post/update" name="update" value="Update" />
+  <input class="btn btn-danger" type="submit" formaction="/post/delete" name="delete" value="Delete"
+         onclick="return confirm('Confirm delete?')"/>
   <a class="btn btn-default" href="/post/<%= @post.id %>">Cancel</a>
 </form>
