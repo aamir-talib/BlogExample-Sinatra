@@ -7,6 +7,9 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 Bundler.require
 
+require_relative 'model/post'
+require_relative 'model/comment'
+
 #-------------------------------------------------------------------------------
 
 if ENV['VCAP_SERVICES'].nil?
@@ -21,25 +24,6 @@ else
 end
 
 #===============================================================================
-
-class Post
-  include DataMapper::Resource
-  property :id, Serial
-  property :title, String
-  property :body, Text
-  property :attachment, String
-  property :created_at, DateTime
-
-  has n, :comments
-end
-
-class Comment
-  include DataMapper::Resource
-  property :id, Serial
-  property :body, Text
-  property :created_at, DateTime
-  belongs_to :post
-end
 
 DataMapper.finalize
 Post.auto_upgrade!
