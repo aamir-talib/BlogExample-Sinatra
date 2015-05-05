@@ -86,7 +86,7 @@ get '/post/:id/attachment/download' do |post_id|
   #redirect "/post/#{post.id}/#{file_name}"
 end
 
-get '/post/edit/:id' do |post_id|
+get '/post/:id/edit' do |post_id|
   @post = Post.get(post_id)
   erb :edit
 end
@@ -121,12 +121,14 @@ post '/post/upload' do
 end
 
 post '/post/:id/comments/create' do |post_id|
-  blog_post = Post.get(post_id.to_i)
-  comment = Comment.new(:body => params['body'], :post => blog_post)
-  if comment.save
-    status 201
-  else
-    status 412
+  if params[:body].length > 0
+    blog_post = Post.get(post_id.to_i)
+    comment = Comment.new(:body => params['body'], :post => blog_post)
+    if comment.save
+      status 201
+    else
+      status 412
+    end
   end
   redirect "/post/#{post_id}"
 end
@@ -139,3 +141,39 @@ end
 
 
 __END__
+
+@@layout
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+
+
+    <!-- comment added just for resting -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
+  </body>
+</html>
+

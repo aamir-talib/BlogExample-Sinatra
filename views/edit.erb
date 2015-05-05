@@ -1,8 +1,27 @@
-<h1>Edit blog post</h1>
+<div class="breadcrumb">
+  <li><a href="/">All Posts</a></li>
+  <li><a href="/post/<%= @post.id %>"><%= @post.title %></a></li>
+  <li class="active">Edit</li>
+</div>
+
+<div class="page-header">
+  <h1>Edit blog post</h1>
+</div>
+
 <form action="/post/update" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="id" value="<%= @post.id %>" >
-  <p>Title: <input type="text" name="title" value="<%= @post.title %>"></p>
-  <p>Text: <textarea name="body" rows="10" cols="40"><%= @post.body %></textarea></p>
-  <p>Attachment: <input type="file" name="attachment"> </p>
-  <input type="submit" name="Publish" />
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" name="title" class="form-control input-lg" value="<%= @post.title %>">
+  </div>
+  <div class="form-group">
+    <label>Body:</label>
+    <textarea name="body" rows="10" class="form-control"><%= @post.body %></textarea>
+  </div>
+  <div class="form-group">
+    <label>Attachment:</label>
+    <input type="file" name="attachment">
+  </div>
+  <input class="btn btn-success" type="submit" name="Publish" value="Update" />
+  <a class="btn btn-default" href="/post/<%= @post.id %>">Cancel</a>
 </form>
