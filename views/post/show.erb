@@ -1,5 +1,5 @@
 <div class="breadcrumb">
-  <li><a href="/">All Posts</a></li>
+  <li><a href="/post/list">All Posts</a></li>
   <li class="active"><%= @post.title %></li>
 </div>
 
@@ -27,7 +27,7 @@
     <td style="border:none">
       <%= comment.body %>
       <small class="pull-right">
-        <%= comment.created_at.strftime("(Commented on %m/%d/%Y at %I:%M%p)") %>
+        <%= comment.created_at.strftime('(Commented on %m/%d/%Y at %I:%M%p)') %>
         <a class="label label-danger"
           href="/post/<%= @post.id %>/comments/delete/<%= comment.id %>"
           onclick="return confirm('Confirm delete?')">
