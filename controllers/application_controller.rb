@@ -6,6 +6,9 @@ class ApplicationController < Sinatra::Base
   helpers ApplicationHelpers
 
   set :views, File.expand_path('../../views', __FILE__)
+  set :erb, :layout => :'../layouts/default'
+  set :public_folder, 'public'
+
   get '/' do
     redirect to('/post')
     #@posts = Post.all(:order => [:id.desc], :limit => 20)
