@@ -7,7 +7,6 @@ require 'rubygems'
 require 'bundler'
 require 'bundler/setup'
 require 'sinatra'
-require 'sinatra/base'
 require 'sinatra/reloader' if development?
 Bundler.require
 

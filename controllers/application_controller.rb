@@ -11,8 +11,6 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
     redirect to('/post')
-    #@posts = Post.all(:order => [:id.desc], :limit => 20)
-    #erb :index
   end
 
 end
