@@ -1,0 +1,15 @@
+<div class="breadcrumb">
+  <li class="active">All Posts</li>
+</div>
+
+<div class="page-header">
+  <a class="btn btn-default pull-right" href="/post/create"><span class="glyphicon glyphicon-plus"></span> Create New</a>
+  <h1>All Blog Posts</h1>
+</div>
+
+<% @posts.each do |post| %>
+  <blockquote>
+    <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
+    <p><%= post.body[0, 100] %></p>
+  </blockquote>
+<% end %>

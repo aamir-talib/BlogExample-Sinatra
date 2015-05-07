@@ -1,0 +1,49 @@
+<div class="breadcrumb">
+  <li><a href="/post/list">All Posts</a></li>
+  <li class="active"><%= @post.title %></li>
+</div>
+
+<div class="page-header">
+  <h1><%= @post.title %>
+    <small>
+      <a class="btn btn-warning btn-sm" href="/post/<%= @post.id %>/edit">Edit Post</a>
+    </small>
+  </h1>
+</div>
+
+<p><%= @post.body %></p>
+<p><%= @post.created_at.strftime("Posted on %m/%d/%Y at %I:%M%p") %></p>
+<% if @post.attachment %>
+  <p>Attachment: <a href="/post/<%= @post.id %>/attachment/download"><%= @post.attachment %></a></p>
+<% end %>
+
+<hr/>
+
+<h2>Comments</h2>
+
+<table class="table table-hover">
+<% @post.comments.each { |comment| %>
+  <tr>
+    <td style="border:none">
+      <%= comment.body %>
+      <small class="pull-right">
+        <%= comment.created_at.strftime('(Commented on %m/%d/%Y at %I:%M%p)') %>
+        <a class="label label-danger"
+          href="/post/<%= @post.id %>/comments/delete/<%= comment.id %>"
+          onclick="return confirm('Confirm delete?')">
+          Delete
+        </a>
+      </small>
+    </td>
+  </tr>
+<% } %>
+</table>
+
+
+<h3>Add new</h3>
+<form action="/post/<%= @post.id %>/comments/create" method="POST">
+  <div class="form-group">
+    <textarea class="form-control" name="body" rows="1"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>

@@ -1,8 +1,0 @@
-<h1>Edit blog post</h1>
-<form action="/post/update" method="POST" enctype="multipart/form-data">
-  <input type="hidden" name="id" value="<%= @post.id %>" >
-  <p>Title: <input type="text" name="title" value="<%= @post.title %>"></p>
-  <p>Text: <textarea name="body" rows="10" cols="40"><%= @post.body %></textarea></p>
-  <p>Attachment: <input type="file" name="attachment"> </p>
-  <input type="submit" name="Publish" />
-</form>
